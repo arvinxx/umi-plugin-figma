@@ -4,8 +4,8 @@
 
 [![Test CI status][test-ci]][test-ci-url] [![Release CI][release-ci]][deploy-ci-url] [![Coverage][coverage]][codecov-url]
 
-[version-url]: https://img.shields.io/github/v/release/arvinxx/umi-plugin-develop-template
-[license-url]: https://img.shields.io/github/license/arvinxx/umi-plugin-develop-template
+[version-url]: https://img.shields.io/github/v/release/arvinxx/umi-plugin-figma
+[license-url]: https://img.shields.io/github/license/arvinxx/umi-plugin-figma
 
 <!-- semantic-release -->
 
@@ -14,15 +14,15 @@
 
 <!-- coverage -->
 
-[coverage]: https://codecov.io/gh/arvinxx/umi-plugin-develop-template/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/arvinxx/umi-plugin-develop-template/branch/master
+[coverage]: https://codecov.io/gh/arvinxx/umi-plugin-figma/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/arvinxx/umi-plugin-figma/branch/master
 
 <!-- Github CI -->
 
-[test-ci]: https://github.com/arvinxx/umi-plugin-develop-template/workflows/Test%20CI/badge.svg
-[release-ci]: https://github.com/arvinxx/umi-plugin-develop-template/workflows/Release%20CI/badge.svg
-[test-ci-url]: https://github.com/arvinxx/umi-plugin-develop-template/actions?query=workflow%3A%22Test+CI%22
-[deploy-ci-url]: https://github.com/arvinxx/umi-plugin-develop-template/actions?query=workflow%3A%22Release+CI%22
+[test-ci]: https://github.com/arvinxx/umi-plugin-figma/workflows/Test%20CI/badge.svg
+[release-ci]: https://github.com/arvinxx/umi-plugin-figma/workflows/Release%20CI/badge.svg
+[test-ci-url]: https://github.com/arvinxx/umi-plugin-figma/actions?query=workflow%3A%22Test+CI%22
+[deploy-ci-url]: https://github.com/arvinxx/umi-plugin-figma/actions?query=workflow%3A%22Release+CI%22
 
 用于开发 umi 插件的模板
 

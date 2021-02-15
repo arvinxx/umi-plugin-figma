@@ -5,7 +5,7 @@ const isProdSite = process.env.NODE_ENV === 'production';
  * 快查地址: https://typedoc.org/guides/options/
  */
 module.exports = {
-  name: 'umi-plugin-develop-template',
+  name: 'umi-plugin-figma',
 
   // mode: 'file',
   tsconfig: './tsconfig-typedoc.json',

@@ -1,6 +1,5 @@
 module.exports = {
   scopeDisplayName: {
-    '*': '杂项',
     script: '脚本',
     scripts: '脚本',
     changelog: '日志',
@@ -9,4 +8,5 @@ module.exports = {
     types: '类型',
     readme: '说明文档',
   },
+  titleLanguage: 'zh-CN',
 };

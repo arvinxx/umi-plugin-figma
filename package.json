@@ -1,8 +1,8 @@
 {
-  "name": "umi-plugin-develop-template",
-  "version": "1.1.0",
+  "name": "umi-plugin-figma",
+  "version": "0.0.0",
   "main": "lib/index.js",
-  "description": "a umi plugin {{template}}",
+  "description": "a umi plugin to develop figma plugin",
   "authors": {
     "name": "Arvin Xu",
     "email": "arvinx@foxmail.com"
@@ -11,10 +11,10 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "homepage": "https://github.com/arvinxx/umi-plugin-develop-template#readme",
+  "homepage": "https://github.com/arvinxx/umi-plugin-figma#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arvinxx/umi-plugin-develop-template.git"
+    "url": "git+https://github.com/arvinxx/umi-plugin-figma.git"
   },
   "scripts": {
     "start": "npm run build && npm run example:dev",
