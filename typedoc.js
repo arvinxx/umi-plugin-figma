@@ -43,5 +43,5 @@ module.exports = {
   // 生成文件名用 - 隔开
   filenameSeparator: '-',
   // 不生成 navigation 的索引
-  navigationEnabled: true,
+  hideInPageTOC: true,
 };
