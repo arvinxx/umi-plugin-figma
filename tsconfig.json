@@ -1,0 +1,17 @@
+{
+  "include": ["src", "test"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "declaration": true
+  },
+  "exclude": ["node_modules", "dist", "lib", "fixtures", "examples"]
+}

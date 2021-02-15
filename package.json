@@ -1,0 +1,116 @@
+{
+  "name": "umi-plugin-develop-template",
+  "version": "1.1.0",
+  "main": "lib/index.js",
+  "description": "a umi plugin {{template}}",
+  "authors": {
+    "name": "Arvin Xu",
+    "email": "arvinx@foxmail.com"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/arvinxx/umi-plugin-develop-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvinxx/umi-plugin-develop-template.git"
+  },
+  "scripts": {
+    "start": "npm run build && npm run example:dev",
+    "dev": "father-build -w",
+    "build": "father-build",
+    "---------": "",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "test:update": "umi-test --updateSnapshot",
+    "--------- ": "",
+    "example:dev": "cross-env APP_ROOT=example umi dev",
+    "example:build": "cross-env APP_ROOT=example umi build",
+    "---------     ": "",
+    "docs": "cross-env yarn api:build && APP_ROOT=document umi dev --dumi",
+    "docs:build": "cross-env yarn api:build && APP_ROOT=document umi build --dumi",
+    "docs:publish": "yarn docs:build && yarn docs:publish-only",
+    "docs:publish-only": "gh-pages -d ./document/dist",
+    "---------  ": "",
+    "api:build": "yarn api:clean && typedoc",
+    "api:clean": "rm -rf document/docs/api",
+    "---------   ": "",
+    "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s -r 0",
+    "release": "semantic-release",
+    "---------    ": "",
+    "lint": "npm run lint-eslint",
+    "tsc": "tsc -p tsconfig-check.json",
+    "lint-eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty src",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ",
+    "---------      ": "",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "clean": "rm -rf es lib example/dist document/dist example/.umi*/ document/.umi*/ coverage .eslintcache"
+  },
+  "lint-staged": {
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "eslint -c .eslintrc.js"
+    ],
+    "*.{css,less,scss}": [
+      "stylelint   --fix"
+    ],
+    "*.{ts,tsx,json,js,css,less,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@ant-design/pro-skeleton": "^1.0.0-beta.2",
+    "@commitlint/cli": "^11.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/react-hooks": "^5.0.0",
+    "@types/fs-extra": "^9.0.6",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.21",
+    "@umijs/fabric": "^2.5.2",
+    "@umijs/preset-dumi": "^1.1.2",
+    "@umijs/test": "^3.3.6",
+    "@umijs/test-utils": "^3.3.6",
+    "antd": "^4.10.3",
+    "body-parser": "^1.18.2",
+    "commitlint-config-gitmoji": "^2.1.2",
+    "concurrently": "^5.3.0",
+    "conventional-changelog-cli": "^2.1.1",
+    "conventional-changelog-gitmoji-config": "^1.1.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.18.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.2.1",
+    "express": "^4.15.3",
+    "father-build": "^1.17.2",
+    "gh-pages": "^3.1.0",
+    "husky": "^4.3.8",
+    "lerna": "^3.20.2",
+    "lint-staged": "^10.0.8",
+    "npm-run-all": "^4.1.5",
+    "pify": "^5.0.0",
+    "prettier": "^2.2.1",
+    "puppeteer": "^1.20.0",
+    "query-string": "^6.13.8",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.9.0",
+    "semantic-release": "^17.3.3",
+    "test-umi-plugin": "^0.1.0",
+    "ts-jest": "^26.4.4",
+    "typedoc": "^0.20.16",
+    "typedoc-plugin-markdown": "^3.4.0",
+    "umi": "^3.3.6"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "fs-extra": "^9.0.1"
+  }
+}
