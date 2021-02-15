@@ -1,7 +1,7 @@
 import type { IApi } from 'umi';
 import { join } from 'path';
 import fse from 'fs-extra';
-import { baseDevURL, isDev } from '../utils';
+// import { baseDevURL, isDev } from '../utils';
 
 declare module 'umi' {
   interface BaseIConfig {

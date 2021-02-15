@@ -30,8 +30,6 @@
     "---------     ": "",
     "docs": "cross-env yarn api:build && APP_ROOT=document umi dev --dumi",
     "docs:build": "cross-env yarn api:build && APP_ROOT=document umi build --dumi",
-    "docs:publish": "yarn docs:build && yarn docs:publish-only",
-    "docs:publish-only": "gh-pages -d ./document/dist",
     "---------  ": "",
     "api:build": "yarn api:clean && typedoc",
     "api:clean": "rm -rf document/docs/api",
@@ -39,7 +37,7 @@
     "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s -r 0",
     "release": "semantic-release",
     "---------    ": "",
-    "lint": "npm run lint-eslint",
+    "lint": "yarn lint-eslint && yarn tsc",
     "tsc": "tsc -p tsconfig-check.json",
     "lint-eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty src",
     "lint-staged": "lint-staged",
@@ -63,13 +61,13 @@
   },
   "devDependencies": {
     "@ant-design/pro-skeleton": "^1.0.0-beta.2",
-    "@commitlint/cli": "^11.0.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/release-notes-generator": "^9.0.1",
     "@testing-library/react": "^9.4.0",
     "@testing-library/react-hooks": "^5.0.0",
     "@types/fs-extra": "^9.0.6",
+    "@types/generate-json-webpack-plugin": "^0.3.2",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.21",
     "@umijs/fabric": "^2.5.2",
@@ -78,6 +76,7 @@
     "@umijs/test-utils": "^3.3.6",
     "antd": "^4.10.3",
     "body-parser": "^1.18.2",
+    "commitlint": "^11.0.0",
     "commitlint-config-gitmoji": "^2.1.2",
     "concurrently": "^5.3.0",
     "conventional-changelog-cli": "^2.1.1",
@@ -88,12 +87,10 @@
     "eslint-import-resolver-typescript": "^2.2.1",
     "express": "^4.15.3",
     "father-build": "^1.17.2",
-    "gh-pages": "^3.1.0",
     "husky": "^4.3.8",
     "lerna": "^3.20.2",
     "lint-staged": "^10.0.8",
     "npm-run-all": "^4.1.5",
-    "pify": "^5.0.0",
     "prettier": "^2.2.1",
     "puppeteer": "^1.20.0",
     "query-string": "^6.13.8",
@@ -111,6 +108,7 @@
     "lib"
   ],
   "dependencies": {
-    "fs-extra": "^9.0.1"
+    "fs-extra": "^9.0.1",
+    "generate-json-webpack-plugin": "^2.0.0"
   }
 }

@@ -1,4 +1,4 @@
-import type { IApi, IRoute } from 'umi';
+import type { IApi } from 'umi';
 
 /**
  * 将 umi 的配置修改成可以用于生成插件文件的状态
