@@ -1,17 +1,14 @@
 {
   "include": ["src", "test", "types"],
   "compilerOptions": {
+    "noEmit": true,
     "target": "ESNext",
     "moduleResolution": "node",
-    "jsx": "preserve",
-    "allowJs": true,
     "esModuleInterop": true,
-    "experimentalDecorators": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "declaration": true
+    "suppressImplicitAnyIndexErrors": true
   },
   "exclude": ["node_modules", "dist", "lib", "fixtures", "examples"]
 }
